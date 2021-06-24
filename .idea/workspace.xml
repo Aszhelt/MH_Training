@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2eae4e4-6c8f-4998-a713-beeb751b62db" name="Default Changelist" comment="login log out register">
-      <change afterPath="$PROJECT_DIR$/MH_Training/storage/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/storage/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/storage/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/storage/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/storage/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/storage/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/storage/views.py" afterDir="false" />
+    <list default="true" id="e2eae4e4-6c8f-4998-a713-beeb751b62db" name="Default Changelist" comment="storage app&#10;model item (admin for it)">
+      <change afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/storage/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/MH_Training/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/MH_Training/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/MH_Training/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/MH_Training/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/storage/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/storage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,10 +38,11 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MH_Training_old" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/MH_Training/storage/templates/storage" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\MH_Training\MH_Training\storage\templates\storage" />
       <recent name="C:\MH_Training\MH_Training\core\templates" />
       <recent name="C:\MH_Training\MH_Training\core\static\core" />
       <recent name="C:\MH_Training\MH_Training\core\templates\core" />
@@ -107,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624543152535</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="storage app&#10;model item (admin for it)">
+      <created>1624554255783</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1624554255783</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -132,6 +138,7 @@
     <MESSAGE value="main page" />
     <MESSAGE value="main page style" />
     <MESSAGE value="login log out register" />
-    <option name="LAST_COMMIT_MESSAGE" value="login log out register" />
+    <MESSAGE value="storage app&#10;model item (admin for it)" />
+    <option name="LAST_COMMIT_MESSAGE" value="storage app&#10;model item (admin for it)" />
   </component>
 </project>

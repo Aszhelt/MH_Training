@@ -1,3 +1,7 @@
 from django.shortcuts import render
+from .models import Item
 
-# Create your views here.
+def storage_main(response):
+    items = Item.objects.all()
+    return render(response, 'storage/index.html',
+                   {'items': items})
