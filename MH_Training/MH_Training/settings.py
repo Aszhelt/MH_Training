@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['.localhost', '127.0.0.1', '[::1]']
 
 INSTALLED_APPS = [
     'core.apps.CoreConfig',
+    'storage.apps.StorageConfig',
     'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',

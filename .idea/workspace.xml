@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2eae4e4-6c8f-4998-a713-beeb751b62db" name="Default Changelist" comment="main page style">
-      <change afterPath="$PROJECT_DIR$/MH_Training/core/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/core/templates/register/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/core/templates/registration/login.html" afterDir="false" />
+    <list default="true" id="e2eae4e4-6c8f-4998-a713-beeb751b62db" name="Default Changelist" comment="login log out register">
+      <change afterPath="$PROJECT_DIR$/MH_Training/storage/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/storage/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/storage/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/storage/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/storage/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/storage/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/storage/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/core/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/core/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/MH_Training/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/MH_Training/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/MH_Training/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/MH_Training/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +40,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/MH_Training/core/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MH_Training_old" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -96,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624537112350</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="login log out register">
+      <created>1624543152535</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1624543152535</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -120,6 +131,7 @@
     <MESSAGE value="base settings" />
     <MESSAGE value="main page" />
     <MESSAGE value="main page style" />
-    <option name="LAST_COMMIT_MESSAGE" value="main page style" />
+    <MESSAGE value="login log out register" />
+    <option name="LAST_COMMIT_MESSAGE" value="login log out register" />
   </component>
 </project>
