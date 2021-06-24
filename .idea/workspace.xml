@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2eae4e4-6c8f-4998-a713-beeb751b62db" name="Default Changelist" comment="storage app&#10;model item (admin for it)">
-      <change afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/storage/urls.py" afterDir="false" />
+    <list default="true" id="e2eae4e4-6c8f-4998-a713-beeb751b62db" name="Default Changelist" comment="item view on storage/index">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/MH_Training/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/MH_Training/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/MH_Training/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/MH_Training/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/uploads/cat_6_black.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/uploads/cat_7_orange.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/storage/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/storage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624554255783</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="item view on storage/index">
+      <created>1624558137486</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1624558137486</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -139,6 +145,7 @@
     <MESSAGE value="main page style" />
     <MESSAGE value="login log out register" />
     <MESSAGE value="storage app&#10;model item (admin for it)" />
-    <option name="LAST_COMMIT_MESSAGE" value="storage app&#10;model item (admin for it)" />
+    <MESSAGE value="item view on storage/index" />
+    <option name="LAST_COMMIT_MESSAGE" value="item view on storage/index" />
   </component>
 </project>
