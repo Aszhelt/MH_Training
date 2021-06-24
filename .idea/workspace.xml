@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2eae4e4-6c8f-4998-a713-beeb751b62db" name="Default Changelist" comment="main page">
-      <change afterPath="$PROJECT_DIR$/MH_Training/core/static/core/style.css" afterDir="false" />
+    <list default="true" id="e2eae4e4-6c8f-4998-a713-beeb751b62db" name="Default Changelist" comment="main page style">
+      <change afterPath="$PROJECT_DIR$/MH_Training/core/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/core/templates/register/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/core/templates/registration/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/core/templates/core/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/core/templates/core/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/core/templates/core/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/core/templates/core/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/core/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/core/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,10 +36,11 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/MH_Training/core/static/core" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/MH_Training/core/templates" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\MH_Training\MH_Training\core\templates" />
       <recent name="C:\MH_Training\MH_Training\core\static\core" />
       <recent name="C:\MH_Training\MH_Training\core\templates\core" />
     </key>
@@ -86,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624532656614</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="main page style">
+      <created>1624537112350</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1624537112350</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -109,6 +119,7 @@
     <MESSAGE value="init django" />
     <MESSAGE value="base settings" />
     <MESSAGE value="main page" />
-    <option name="LAST_COMMIT_MESSAGE" value="main page" />
+    <MESSAGE value="main page style" />
+    <option name="LAST_COMMIT_MESSAGE" value="main page style" />
   </component>
 </project>
