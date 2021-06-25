@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2eae4e4-6c8f-4998-a713-beeb751b62db" name="Default Changelist" comment="view image on DEBUG=False">
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/items/CAT_7_black.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/static/core/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/view_item.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+    <list default="true" id="e2eae4e4-6c8f-4998-a713-beeb751b62db" name="Default Changelist" comment="storage concealment&#10;grey style">
+      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/items/cat_6_black.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/items/cat_6_orange.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/items/photo5188398220047397964.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/storage/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/create_item.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/MH_Training.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MH_Training.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/MH_Training/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/MH_Training/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/core/static/core/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/core/static/core/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/core/templates/core/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/core/templates/core/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/core/templates/core/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/core/templates/core/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/storage/templates/storage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/storage/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/urls.py" afterDir="false" />
@@ -24,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -45,7 +46,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/MH_Training/static" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TwT_tutorial" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -138,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624562534902</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="storage concealment&#10;grey style">
+      <created>1624635138857</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1624635138857</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -166,6 +174,7 @@
     <MESSAGE value="storage app&#10;model item (admin for it)" />
     <MESSAGE value="item view on storage/index" />
     <MESSAGE value="view image on DEBUG=False" />
-    <option name="LAST_COMMIT_MESSAGE" value="view image on DEBUG=False" />
+    <MESSAGE value="storage concealment&#10;grey style" />
+    <option name="LAST_COMMIT_MESSAGE" value="storage concealment&#10;grey style" />
   </component>
 </project>

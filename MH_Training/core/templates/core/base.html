@@ -15,8 +15,13 @@
 <body>
 <div class="sidenav">
     {% if request.user.is_authenticated %}
-        <a href="/">{{ user.username }}</a>
+        {% if request.user.is_superuser %}
+            <a href="/admin">{{ user.username }}</a>
+        {% else %}
+            <a href="/">{{ user.username }}</a>
+        {% endif %}
         <a href="/storage">Storage</a>
+        <a href="/storage/create">Create</a>
         <a href="/logout">Logout</a>
     {% else %}
         <a href="/login">Login</a>

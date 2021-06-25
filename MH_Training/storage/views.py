@@ -1,6 +1,9 @@
 from django.shortcuts import render, get_object_or_404
+from django.urls import reverse_lazy
+
 from .models import Item
 from django.http import HttpResponseRedirect
+from .forms import CreateNewItem
 
 
 def storage_main(response):
@@ -17,5 +20,19 @@ def view_item(response, id):
         item = get_object_or_404(Item, pk=id)
         return render(response, 'storage/view_item.html',
                        {'item': item})
+    else:
+        return HttpResponseRedirect('/login')
+
+
+def create_item(response):
+    if response.user.is_authenticated:
+        if response.method == "POST":
+            form = CreateNewItem(response.POST, response.FILES)
+            if form.is_valid():
+                form.save()
+                return HttpResponseRedirect('/storage')
+        else:
+            form = CreateNewItem()
+        return render(response, "storage/create_item.html", {"form": form})
     else:
         return HttpResponseRedirect('/login')

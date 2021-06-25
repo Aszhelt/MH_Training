@@ -1,0 +1,14 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Create new List{% endblock %}
+
+{% block content %}
+<h3>Create page</h3>
+<form method="post" action="/storage/create/" class="form-group" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="input-group mb-3">
+        {{ form.as_p }}
+        <button type="submit", name="save" class="btn btn-success">Create new</button>
+    </div>
+</form>
+{% endblock %}
