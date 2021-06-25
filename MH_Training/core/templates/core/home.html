@@ -3,5 +3,9 @@
 {% block title %}Home page{% endblock %}
 
 {% block content %}
-<h1>Home Page</h1>
+    {% if request.user.is_authenticated %}
+        <h1>Hello {{ user.username }}</h1>
+    {% else %}
+        <h1>Need login</h1>
+    {% endif %}
 {% endblock %}

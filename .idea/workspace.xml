@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2eae4e4-6c8f-4998-a713-beeb751b62db" name="Default Changelist" comment="item view on storage/index">
+    <list default="true" id="e2eae4e4-6c8f-4998-a713-beeb751b62db" name="Default Changelist" comment="view image on DEBUG=False">
+      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/items/CAT_7_black.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/static/core/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/view_item.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/MH_Training/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/MH_Training/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/MH_Training/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/MH_Training/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/core/static/core/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/core/static/core/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/core/templates/core/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/core/templates/core/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/core/templates/core/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/core/templates/core/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/media/uploads/cat_6_black.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/media/uploads/cat_7_orange.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/storage/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/storage/templates/storage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/storage/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/storage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +25,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -35,16 +42,21 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/MH_Training/storage/templates/storage" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/MH_Training/static" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\MH_Training\MH_Training\storage\templates\storage" />
-      <recent name="C:\MH_Training\MH_Training\core\templates" />
+      <recent name="C:\MH_Training\MH_Training\static" />
       <recent name="C:\MH_Training\MH_Training\core\static\core" />
+      <recent name="C:\MH_Training" />
       <recent name="C:\MH_Training\MH_Training\core\templates\core" />
+      <recent name="C:\MH_Training\MH_Training\storage\templates\storage" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\MH_Training\MH_Training\static\core" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -119,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624558137486</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="view image on DEBUG=False">
+      <created>1624562534902</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1624562534902</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -146,6 +165,7 @@
     <MESSAGE value="login log out register" />
     <MESSAGE value="storage app&#10;model item (admin for it)" />
     <MESSAGE value="item view on storage/index" />
-    <option name="LAST_COMMIT_MESSAGE" value="item view on storage/index" />
+    <MESSAGE value="view image on DEBUG=False" />
+    <option name="LAST_COMMIT_MESSAGE" value="view image on DEBUG=False" />
   </component>
 </project>
