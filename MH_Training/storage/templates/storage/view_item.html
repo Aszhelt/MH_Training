@@ -3,7 +3,15 @@
 {% block title %}View item{% endblock %}
 
 {% block content %}
+
 <h1>{{item.name}}</h1>
-<p>{{item.stock}}</p>
 <img src="{{ item.image.url }}" alt="{{ item.name }}" width="200" height="200">
+
+<form action="/storage/{{item.id}}/" method="post">
+    {% csrf_token %}
+    <label><h2>Stock =</h2></label>
+    <input id="stock" type="number" name="stock" value="{{ item.stock }}">
+    <button type="submit", name="save" class="btn btn-success">OK</button>
+</form>
+
 {% endblock %}
