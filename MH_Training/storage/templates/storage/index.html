@@ -4,17 +4,19 @@
 
 {% block content %}
 {% csrf_token %}
-<div class="row">
-    {% for item in items %}
-    <div class="col">
-        <div class="card" style="width: 15rem;">
-            <a href="{{item.id}}"><img src="{{ item.image.url }}" class="card-img-top" alt="{{ item.name }}" width="200" height="200"></a>
-            <div class="card-body">
-                <h5 class="card-title">{{ item.name }}</h5>
-                <p class="card-text">stock = {{ item.stock }}</p>
-            </div>
-        </div>
+<div class="container">
+    <div class="row">
+        {% for group_tag in group_tags %}
+                <div class="col-sm">
+                    <div class="card" style="width: 15rem;">
+                        <a href="{{group_tag.name}}"><img src="{{ group_tag.image.url }}" class="card-img-top" alt="{{ group_tag.name}}"
+                                                   width="200" height="200"></a>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ group_tag.name}}</h5>
+                        </div>
+                    </div>
+                </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>
 {% endblock %}

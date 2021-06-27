@@ -1,16 +1,28 @@
 from django.shortcuts import render, get_object_or_404
-from django.urls import reverse_lazy
 
-from .models import Item
+from .models import Item, Tag, GroupTag
 from django.http import HttpResponseRedirect
 from .forms import CreateNewItem, EditItem
 
 
 def storage_main(response):
     if response.user.is_authenticated:
-        items = Item.objects.all()
+        group_tags = (GroupTag.objects.get(name='Critical_bleeding'), GroupTag.objects.get(name='Airways'),
+                      GroupTag.objects.get(name='Breathing'), GroupTag.objects.get(name='Circulation'))
         return render(response, 'storage/index.html',
-                       {'items': items})
+                       {'group_tags': group_tags})
+    else:
+        return HttpResponseRedirect('/login')
+
+
+def view_group(response, name):
+    if response.user.is_authenticated:
+        tags = Tag.objects.filter(group__name=name)
+        items = Item.objects.order_by('tags')
+        name = name.replace('_', ' ')
+        return render(response, 'storage/view_group.html',
+                       {'items': items, 'tags': tags,
+                        'name': name})
     else:
         return HttpResponseRedirect('/login')
 

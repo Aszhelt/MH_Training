@@ -1,0 +1,30 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Storage page{% endblock %}
+
+{% block content %}
+{% csrf_token %}
+<h1>{{name}}</h1>
+<hr align="left" width="100%" size="8" color="#ff0000" />
+{% for tag in tags %}
+<h3>{{tag}}</h3>
+<hr align="left" width="100%" size="4" color="#ff0000" />
+<div class="container">
+<div class="row">
+        {% for item in items %}
+            {% if tag in item.tags.all %}
+                <div class="col-sm">
+                    <div class="card" style="width: 15rem;">
+                        <a href="{{item.id}}"><img src="{{ item.image.url }}" class="card-img-top" alt="{{ item.name }}" width="200" height="200"></a>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ item.name }}</h5>
+                            <p class="card-text">stock = {{ item.stock }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+</div>
+</div>
+{% endfor %}
+{% endblock %}

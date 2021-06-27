@@ -6,7 +6,7 @@ class CreateNewItem(forms.ModelForm):
 
     class Meta:
         model = Item
-        fields = ['name', 'stock', 'image']
+        fields = ['name', 'stock', 'image', 'tags']
 
 
 class EditItem(forms.Form):
