@@ -5,10 +5,13 @@ from django.http import HttpResponseRedirect
 from .forms import CreateNewItem, EditItem
 
 
+group_tags = (GroupTag.objects.get(name='Critical_bleeding'), GroupTag.objects.get(name='Airways'),
+                      GroupTag.objects.get(name='Breathing'), GroupTag.objects.get(name='Circulation'))
+
+
 def storage_main(response):
     if response.user.is_authenticated:
-        group_tags = (GroupTag.objects.get(name='Critical_bleeding'), GroupTag.objects.get(name='Airways'),
-                      GroupTag.objects.get(name='Breathing'), GroupTag.objects.get(name='Circulation'))
+        group_tags
         return render(response, 'storage/index.html',
                        {'group_tags': group_tags})
     else:
@@ -22,7 +25,7 @@ def view_group(response, name):
         name = name.replace('_', ' ')
         return render(response, 'storage/view_group.html',
                        {'items': items, 'tags': tags,
-                        'name': name})
+                        'name': name, 'group_tags': group_tags})
     else:
         return HttpResponseRedirect('/login')
 

@@ -8,9 +8,9 @@
     <div class="row">
         {% for group_tag in group_tags %}
                 <div class="col-sm">
-                    <div class="card" style="width: 15rem;">
-                        <a href="{{group_tag.name}}"><img src="{{ group_tag.image.url }}" class="card-img-top" alt="{{ group_tag.name}}"
-                                                   width="200" height="200"></a>
+                    <div class="card" style="width: 12rem;">
+                        <a href="../{{group_tag.name}}"><img src="{{ group_tag.image.url }}" class="card-img-top" alt="{{ group_tag.name}}"
+                                                   height="150"></a>
                         <div class="card-body">
                             <h5 class="card-title">{{ group_tag.name}}</h5>
                         </div>
@@ -19,4 +19,8 @@
         {% endfor %}
     </div>
 </div>
+
+<hr align="left" width="100%" size="8" color="#ff0000" />
+    {% block group_content %}
+    {% endblock group_content %}
 {% endblock %}

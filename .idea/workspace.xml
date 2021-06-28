@@ -1,49 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2eae4e4-6c8f-4998-a713-beeb751b62db" name="Default Changelist" comment="edit item.stock for user">
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/groups/airways.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/groups/breathing.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/groups/circulation.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/groups/circulation_3uIZdwq.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/groups/critical_bleeding.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/items/SICH.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/items/SICH_orange.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/items/combat_gauze.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/items/combat_gauze_training.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/items/esmarch.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/view_group.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django_tags_input-5.1.0.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django_tags_input-5.1.0.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django_tags_input-5.1.0.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django_tags_input-5.1.0.dist-info/REQUESTED" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django_tags_input-5.1.0.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django_tags_input-5.1.0.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/tags_input/__about__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/tags_input/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/tags_input/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/tags_input/exceptions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/tags_input/fields.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/tags_input/static/jquery-3.2.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/tags_input/static/jquery-ui-1.12.1.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/tags_input/static/jquery-ui-1.12.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/tags_input/static/jquery.tagsinput-revisited-2.0.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/tags_input/static/jquery.tagsinput-revisited-2.0.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/tags_input/templates/tags_input_widget.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/tags_input/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/tags_input/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/tags_input/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/tags_input/widgets.py" afterDir="false" />
+    <list default="true" id="e2eae4e4-6c8f-4998-a713-beeb751b62db" name="Default Changelist" comment="tags, group tags, group tag page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/MH_Training/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/MH_Training/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/core/templates/core/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/core/templates/core/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/static/core/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/static/core/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/storage/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/storage/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/storage/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/storage/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/storage/templates/storage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/storage/templates/storage/view_group.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/view_group.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/storage/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/storage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/views.py" afterDir="false" />
     </list>
@@ -81,11 +43,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\MH_Training\MH_Training\media\storage\groups" />
       <recent name="C:\MH_Training\MH_Training\static\core" />
       <recent name="C:\MH_Training\MH_Training\static" />
       <recent name="C:\MH_Training\MH_Training\core\static\core" />
       <recent name="C:\MH_Training" />
-      <recent name="C:\MH_Training\MH_Training\core\templates\core" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\MH_Training\MH_Training\core\static\core" />
@@ -192,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624808039595</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="tags, group tags, group tag page">
+      <created>1624838044284</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1624838044284</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -223,6 +192,7 @@
     <MESSAGE value="storage concealment&#10;grey style" />
     <MESSAGE value="add item for user" />
     <MESSAGE value="edit item.stock for user" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit item.stock for user" />
+    <MESSAGE value="tags, group tags, group tag page" />
+    <option name="LAST_COMMIT_MESSAGE" value="tags, group tags, group tag page" />
   </component>
 </project>
