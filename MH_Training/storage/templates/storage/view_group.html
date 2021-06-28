@@ -12,12 +12,15 @@
             {% for item in items %}
                 {% if tag in item.tags.all %}
                     <div class="col-sm">
-                        <div class="card" style="width: 15rem;">
-                            <a href="../../storage/{{item.id}}"><img src="{{ item.image.url }}" class="card-img-top" alt="{{ item.name }}" width="200" height="200"></a>
-                            <div class="card-body">
-                                <h5 class="card-title">{{ item.name }}</h5>
-                                <p class="card-text">stock = {{ item.stock }}</p>
-                            </div>
+                        <div class="card" style="width: 10rem;">
+                            <h5>{{item.name}}</h5>
+                            <img src="{{ item.image.url }}" alt="{{ item.name }}" width="150" height="150">
+                            <form action="/storage/{{item.id}}/" method="post">
+                                {% csrf_token %}
+                                <label><h6>Stock :</h6></label>
+                                <input id="stock" type="number" name="stock" value="{{ item.stock }}" min="0" max="999999">
+                                <button type="submit", name="save" class="btn btn-success">OK</button>
+                            </form>
                         </div>
                     </div>
                 {% endif %}

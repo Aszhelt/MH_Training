@@ -7,11 +7,11 @@ class ItemAdmin(admin.ModelAdmin):
 
 
 class TagAdmin(admin.ModelAdmin):
-    list_display = ('name',)
+    list_display = ('name', 'sort_priority')
 
 
 class GroupTagAdmin(admin.ModelAdmin):
-    list_display = ('name', 'id')
+    list_display = ('name', 'sort_priority')
 
 
 admin.site.register(Item, ItemAdmin)
