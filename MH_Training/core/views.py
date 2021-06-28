@@ -1,6 +1,4 @@
-from django.http import response
 from django.shortcuts import render, redirect
-from django.views import generic
 from .forms import RegisterForm
 
 def home(response):
