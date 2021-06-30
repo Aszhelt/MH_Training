@@ -2,13 +2,13 @@
 
 {% block content %}
 
-<h1>{{item.name}}</h1>
-<img src="{{ item.image.url }}" alt="{{ item.name }}" width="200" height="200">
+<h1>{{item.item_name}}</h1>
+<img src="{{ item.item_image.url }}" alt="{{ item.item_name }}" width="200" height="200">
 
 <form action="/storage/{{item.id}}/" method="post">
     {% csrf_token %}
     <label><h2>Stock =</h2></label>
-    <input id="stock" type="number" name="stock" value="{{ item.stock }}">
+    <input id="stock" type="number" name="stock" value="{{ item.item_stock }}">
     <button type="submit", name="save" class="btn btn-success">OK</button>
 </form>
 

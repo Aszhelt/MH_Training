@@ -1,28 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2eae4e4-6c8f-4998-a713-beeb751b62db" name="Default Changelist" comment="group_content, view_group extends storage">
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/groups/SICH.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/groups/swat.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/items/AED_training.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/items/cpr_mask.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/items/cpr_seal.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/items/valve_cpr_mask.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/tags/SICH.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/tags/cpr.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/tags/swat.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/tags/wound_tamponade.jpg" afterDir="false" />
+    <list default="true" id="e2eae4e4-6c8f-4998-a713-beeb751b62db" name="Default Changelist" comment="group view, groping by tag">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/MH_Training/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/MH_Training/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/core/templates/core/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/core/templates/core/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/groups/circulation_3uIZdwq.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/groups/SICH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/groups/airways.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/groups/breathing.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/groups/circulation.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/groups/critical_bleeding.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/groups/swat.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/AED_training.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/CAT_7_black.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/NPA.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/NPA_UpfLKXW.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/SICH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/SICH_orange.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/cat_6_black.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/cat_6_orange.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/cat_7_orange.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/combat_gauze.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/combat_gauze_training.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/cpr_mask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/cpr_seal.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/esmarch.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/swat.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/valve_cpr_mask.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/tags/BLS_airways.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/tags/SICH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/tags/cpr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/tags/swat.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/tags/wound_tamponade.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/storage/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/storage/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/storage/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/migrations/0001_initial.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/storage/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/storage/templates/storage/create_item.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/create_item.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/storage/templates/storage/create_item.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/storage/templates/storage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/storage/templates/storage/view_group.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/view_group.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/storage/templates/storage/view_item.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/view_item.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/storage/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/storage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
