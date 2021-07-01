@@ -18,7 +18,7 @@
                 <form action="/storage/{{item.id}}/" method="post">
                     {% csrf_token %}
                     <label><h6>Stock :</h6></label>
-                    <input id="stock" type="number" name="stock" value="{{ item.item_stock }}" min="0" max="999999">
+                    <input id="item_stock" type="number" name="item_stock" value="{{ item.item_stock }}" min="0" max="999999">
                     <button type="submit" , name="save" class="btn btn-success">OK</button>
                 </form>
             </div>

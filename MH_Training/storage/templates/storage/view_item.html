@@ -8,7 +8,7 @@
 <form action="/storage/{{item.id}}/" method="post">
     {% csrf_token %}
     <label><h2>Stock =</h2></label>
-    <input id="stock" type="number" name="stock" value="{{ item.item_stock }}">
+    <input id="item_stock" type="number" name="item_stock" value="{{ item.item_stock }}">
     <button type="submit", name="save" class="btn btn-success">OK</button>
 </form>
 

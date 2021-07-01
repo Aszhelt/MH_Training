@@ -31,9 +31,9 @@ def view_group(response, item_group_name):
         return HttpResponseRedirect('/login')
 
 
-def view_item(response, item_id):
+def view_item(response, id):
     if response.user.is_authenticated:
-        item = get_object_or_404(Item, pk=item_id)
+        item = get_object_or_404(Item, pk=id)
         if response.method == 'POST':
             form = EditItem(response.POST)
             if form.is_valid():
