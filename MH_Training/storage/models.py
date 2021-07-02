@@ -21,7 +21,7 @@ class ItemType(models.Model):
 
 class Item(models.Model):
 
-    item_name = models.CharField(max_length=300, unique=True)
+    item_name = models.CharField(max_length=200)
     item_image = models.ImageField(upload_to='storage/items/')
     item_type = models.ForeignKey(ItemType, related_name='tags', on_delete=models.CASCADE)
     item_stock = models.IntegerField()
