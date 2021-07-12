@@ -1,37 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2eae4e4-6c8f-4998-a713-beeb751b62db" name="Default Changelist" comment="rename to ItemGroups, ItemTypes&#10;ItemTypes: manytomany -&gt; foreignkey">
-      <change afterPath="$PROJECT_DIR$/MHT.drawio" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MHT.png" afterDir="false" />
+    <list default="true" id="e2eae4e4-6c8f-4998-a713-beeb751b62db" name="Default Changelist" comment="setup develop">
+      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/item/quickclot_green.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/itemgroup/circulation.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/itemtype/w_tamp.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/MH_Training/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/MH_Training/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/groups/airways.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/groups/breathing.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/groups/circulation.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/groups/circulation_GxwL414.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/groups/critical_bleeding.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/groups/critical_bleeding_9IcDtxa.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/groups/critical_bleeding_BbBDKgq.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/groups/critical_bleeding_vFdFs2O.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/AED_training.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/CAT_7_black.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/CAT_7_black_ZHTU9AB.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/NPA.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/NPA_natsiLm.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/combat_gauze.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/combat_gauze_3kFNqGY.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/cpr_mask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/swat.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/swat_nqBdect.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/tags/BLS_airways.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/tags/SICH.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/tags/SICH_cO3D5Cr.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/tags/cpr.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/tags/swat.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/tags/swat_F9JSbli.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/tags/wound_tamponade.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/tags/wound_tamponade_EnAhPVK.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/MH_Training/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/MH_Training/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/storage/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/storage/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/storage/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/storage/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/storage/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/storage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +44,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MH_Training" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -235,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625847358630</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="setup develop">
+      <created>1626080204086</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1626080204086</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -269,6 +257,7 @@
     <MESSAGE value="tags, group tags, group tag page" />
     <MESSAGE value="group_content, view_group extends storage" />
     <MESSAGE value="rename to ItemGroups, ItemTypes&#10;ItemTypes: manytomany -&gt; foreignkey" />
-    <option name="LAST_COMMIT_MESSAGE" value="rename to ItemGroups, ItemTypes&#10;ItemTypes: manytomany -&gt; foreignkey" />
+    <MESSAGE value="setup develop" />
+    <option name="LAST_COMMIT_MESSAGE" value="setup develop" />
   </component>
 </project>

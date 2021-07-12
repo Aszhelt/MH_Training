@@ -1,31 +1,50 @@
 from django.db import models
 
 
-class ItemGroup(models.Model):
-    item_group_name = models.CharField(max_length=200)
-    item_group_image = models.ImageField(upload_to='storage/groups/')
-    item_group_sort_priority = models.IntegerField()
-
-    def __str__(self):
-        return self.item_group_name
-
-
 class ItemType(models.Model):
-    item_type_name = models.CharField(max_length=200)
-    item_type_image = models.ImageField(upload_to='storage/tags/')
-    item_type_sort_priority = models.IntegerField()
+
+    name_itemtype = models.CharField(max_length=200)
+    image_itemtype = models.ImageField(upload_to='storage/itemtype/')
+    sortpriority_itemtype = models.IntegerField()
 
     def __str__(self):
-        return self.item_type_name
+        return self.name_itemtype
+
+
+class ItemGroup(models.Model):
+
+    name_itemgroup = models.CharField(max_length=200)
+    image_itemgroup = models.ImageField(upload_to='storage/itemgroup/')
+    sortpriority_itemgroup = models.IntegerField()
+
+    def __str__(self):
+        return self.name_itemgroup
 
 
 class Item(models.Model):
 
-    item_name = models.CharField(max_length=200)
-    item_image = models.ImageField(upload_to='storage/items/')
-    item_type = models.ForeignKey(ItemType, related_name='tags', on_delete=models.CASCADE)
-    item_stock = models.IntegerField()
-    item_group = models.ManyToManyField(ItemGroup, related_name='group')
+    name_item = models.CharField(max_length=200)
+    image_item = models.ImageField(upload_to='storage/item/')
+    type_item = models.ForeignKey(ItemType, related_name='type', on_delete=models.CASCADE)
+    group_item = models.ManyToManyField(ItemGroup, related_name='group')
 
     def __str__(self):
-        return self.item_name
+        return self.name_item
+
+
+class Storage(models.Model):
+
+    name_storage = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.name_storage
+
+
+class Container(models.Model):
+
+    item = models.ForeignKey(Item, related_name='item', on_delete=models.CASCADE)
+    amount = models.IntegerField()
+    storage = models.ForeignKey(Storage, related_name='storage', on_delete=models.CASCADE)
+
+    def __str__(self):
+        return str(self.item) + ' on ' + str(self.storage)

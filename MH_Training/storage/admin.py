@@ -1,19 +1,29 @@
 from django.contrib import admin
-from .models import Item, ItemType, ItemGroup
-
-
-class ItemAdmin(admin.ModelAdmin):
-    list_display = ('item_name', 'item_stock', 'item_image')
+from .models import ItemType, ItemGroup, Item, Storage, Container
 
 
 class ItemTypeAdmin(admin.ModelAdmin):
-    list_display = ('item_type_name', 'item_type_sort_priority')
+    list_display = ('name_itemtype',)
 
 
 class ItemGroupAdmin(admin.ModelAdmin):
-    list_display = ('item_group_name', 'item_group_sort_priority')
+    list_display = ('name_itemgroup',)
 
 
-admin.site.register(Item, ItemAdmin)
+class ItemAdmin(admin.ModelAdmin):
+    list_display = ('name_item',)
+
+
+class StorageAdmin(admin.ModelAdmin):
+    list_display = ('name_storage',)
+
+
+class ContainerAdmin(admin.ModelAdmin):
+    list_display = ('item', 'storage', 'amount')
+
+
 admin.site.register(ItemType, ItemTypeAdmin)
 admin.site.register(ItemGroup, ItemGroupAdmin)
+admin.site.register(Item, ItemAdmin)
+admin.site.register(Storage, StorageAdmin)
+admin.site.register(Container, ContainerAdmin)

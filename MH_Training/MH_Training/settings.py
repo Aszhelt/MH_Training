@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'MH_Training.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mht',
+        'NAME': 'mh_d',
         'USER': 'root',
         'PASSWORD': '',
         'HOST': 'localhost',
