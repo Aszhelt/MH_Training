@@ -22,7 +22,6 @@ from django.conf.urls import url
 
 urlpatterns = [
     path('', include("core.urls")),
-    path('', include("storage.urls")),
     path('', include('django.contrib.auth.urls')),
     path('admin/', admin.site.urls),
     url(r'media/(?P<path>.*)$', serve, {"document_root": MEDIA_ROOT}),

@@ -1,7 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2eae4e4-6c8f-4998-a713-beeb751b62db" name="Default Changelist" comment="rename to ItemGroups, ItemTypes&#10;ItemTypes: manytomany -&gt; foreignkey" />
+    <list default="true" id="e2eae4e4-6c8f-4998-a713-beeb751b62db" name="Default Changelist" comment="rename to ItemGroups, ItemTypes&#10;ItemTypes: manytomany -&gt; foreignkey">
+      <change afterPath="$PROJECT_DIR$/MHT.drawio" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MHT.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/MH_Training/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/MH_Training/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/groups/airways.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/groups/breathing.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/groups/circulation.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/groups/circulation_GxwL414.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/groups/critical_bleeding.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/groups/critical_bleeding_9IcDtxa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/groups/critical_bleeding_BbBDKgq.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/groups/critical_bleeding_vFdFs2O.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/AED_training.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/CAT_7_black.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/CAT_7_black_ZHTU9AB.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/NPA.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/NPA_natsiLm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/combat_gauze.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/combat_gauze_3kFNqGY.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/cpr_mask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/swat.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/items/swat_nqBdect.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/tags/BLS_airways.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/tags/SICH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/tags/SICH_cO3D5Cr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/tags/cpr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/tags/swat.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/tags/swat_F9JSbli.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/tags/wound_tamponade.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/media/storage/tags/wound_tamponade_EnAhPVK.jpg" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -197,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625130397649</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="rename to ItemGroups, ItemTypes&#10;ItemTypes: manytomany -&gt; foreignkey">
+      <created>1625847358630</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1625847358630</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="UnknownFeatures">
