@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2eae4e4-6c8f-4998-a713-beeb751b62db" name="Default Changelist" comment="setup develop">
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/item/quickclot_green.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/itemgroup/circulation.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/itemtype/w_tamp.jpg" afterDir="false" />
+    <list default="true" id="e2eae4e4-6c8f-4998-a713-beeb751b62db" name="Default Changelist" comment="initial models">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/MH_Training/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/MH_Training/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MHT.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/MHT.drawio" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/storage/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/storage/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/storage/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/storage/migrations/0001_initial.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/storage/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/storage/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/storage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626080204086</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="initial models">
+      <created>1626085803925</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1626085803925</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -258,6 +259,7 @@
     <MESSAGE value="group_content, view_group extends storage" />
     <MESSAGE value="rename to ItemGroups, ItemTypes&#10;ItemTypes: manytomany -&gt; foreignkey" />
     <MESSAGE value="setup develop" />
-    <option name="LAST_COMMIT_MESSAGE" value="setup develop" />
+    <MESSAGE value="initial models" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial models" />
   </component>
 </project>
