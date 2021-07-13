@@ -1,24 +1,25 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class ItemType(models.Model):
 
-    name_itemtype = models.CharField(max_length=200)
-    image_itemtype = models.ImageField(upload_to='storage/itemtype/')
-    sortpriority_itemtype = models.IntegerField()
+    name_item_type = models.CharField(max_length=200)
+    image_item_type = models.ImageField(upload_to='storage/item_type/')
+    sort_priority_item_type = models.IntegerField()
 
     def __str__(self):
-        return self.name_itemtype
+        return self.name_item_type
 
 
 class ItemGroup(models.Model):
 
-    name_itemgroup = models.CharField(max_length=200)
-    image_itemgroup = models.ImageField(upload_to='storage/itemgroup/')
-    sortpriority_itemgroup = models.IntegerField()
+    name_item_group = models.CharField(max_length=200)
+    image_item_group = models.ImageField(upload_to='storage/item_group/')
+    sort_priority_item_group = models.IntegerField()
 
     def __str__(self):
-        return self.name_itemgroup
+        return self.name_item_group
 
 
 class Item(models.Model):
@@ -35,6 +36,7 @@ class Item(models.Model):
 class Storage(models.Model):
 
     name_storage = models.CharField(max_length=200)
+    user_storage = models.ForeignKey(User, related_name='user_storage', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name_storage
@@ -50,19 +52,11 @@ class ItemContainer(models.Model):
         return str(self.item_container) + ' on ' + str(self.storage_container)
 
 
-class EventType(models.Model):
-
-    name_eventtype = models.CharField(max_length=200)
-
-    def __str__(self):
-        return self.name_eventtype
-
-
 class Event(models.Model):
 
+    user_event = models.ForeignKey(User, related_name='user_event', on_delete=models.CASCADE)
     name_event = models.CharField(max_length=200)
     date_event = models.DateField()
-    type_event = models.ForeignKey(EventType, related_name='type_event', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name_event
@@ -73,16 +67,16 @@ class ItemRequest(models.Model):
         ('TD', 'ToDo'),
         ('IP', 'InProgress'),
         ('D', 'Done'),
-        ('UD', 'UnDone')
-    )
+        ('L', 'Lost'),
+        ('C', 'Canceled'),
+    )# to int
 
     item_request = models.ForeignKey(Item, related_name='item_request', on_delete=models.CASCADE)
-    amount_itemrequest = models.IntegerField()
-    event_itemrequest = models.ForeignKey(Event, related_name='event_itemrequest', on_delete=models.CASCADE)
+    amount_item_request = models.IntegerField()
+    event_item_request = models.ForeignKey(Event, related_name='event_item_request', on_delete=models.CASCADE)
     storage_out = models.ForeignKey(Storage, related_name='storage_out', on_delete=models.CASCADE)
     storage_in = models.ForeignKey(Storage, related_name='storage_in', on_delete=models.CASCADE)
-    status = models.CharField(max_length=2, choices=STATUS_VARS)
+    status = models.CharField(max_length=2, choices=STATUS_VARS, default='TD')
 
     def __str__(self):
-        return str(self.amount_itemrequest) + '(' + str(self.item_request) + ') ' \
-               + str(self.storage_out) + ' to ' + str(self.storage_in)
+        return f'{self.amount_item_request}({self.item_request}) from {self.storage_out} to {self.storage_in}'

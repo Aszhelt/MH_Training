@@ -1,0 +1,15 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Create{% endblock %}
+
+{% block content %}
+
+    <form method="post" action={{action}} class="form-group" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="input-group mb-3">
+            {{ form.as_p }}
+            <button type="submit", name="save" class="btn btn-success">Create new</button>
+        </div>
+    </form>
+
+{% endblock %}

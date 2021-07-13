@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %}
+
+{% block title %}{{ event }}{% endblock %}
+
+{% block content %}
+
+    <h3>{{ event }}</h3>
+
+        {% for form in forms %}
+            <form action="/item_request/{{ form.0 }}/" method="post">
+                {% csrf_token %}
+                {{ form.1 }}
+                <button type="submit", name="save" class="btn btn-success">Save</button>
+            </form>
+        {% endfor %}
+{% endblock %}
