@@ -15,7 +15,8 @@ class ItemGroup(models.Model):
 class Item(models.Model):
 
     name_item = models.CharField(max_length=100, unique=True)
-    group_item = models.ForeignKey(ItemGroup, related_name='group_item', on_delete=models.SET_NULL, blank=True, null=True)
+    group_item = models.ForeignKey(ItemGroup, related_name='group_item',
+                                   on_delete=models.SET_NULL, blank=True, null=True)
     image_item = models.ImageField(upload_to='storage/item')
 
     def __str__(self):
@@ -27,7 +28,8 @@ class Storage(models.Model):
     name_storage = models.CharField(max_length=100, unique=True)
     user_storage = models.ForeignKey(User, related_name='user_storage', on_delete=models.CASCADE)
     is_public = models.BooleanField(default=False)
-    group_storage = models.ForeignKey(Group, related_name='group_storage', on_delete=models.SET_NULL, blank=True, null=True)
+    group_storage = models.ForeignKey(Group, related_name='group_storage',
+                                      on_delete=models.SET_NULL, blank=True, null=True)
 
     def __str__(self):
         return self.name_storage

@@ -20,8 +20,8 @@
         {% for order in user_orders %}
         <tr>
             <th>{{ order.date_order }}</th>
-            <th>{{ order.order_storage_from }}</th>
-            <th>{{ order.order_storage_to }}</th>
+            <th>{{ order.storage_from }}</th>
+            <th>{{ order.storage_to }}</th>
             <th>{{ order.get_status_order_display }}</th>
             <th><a href="/orders{{ order.id }}">Detail</a></th>
         </tr>
