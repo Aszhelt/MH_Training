@@ -1,20 +1,10 @@
 from django.db import models
-from django.contrib.auth.models import User
-
-
-class ItemType(models.Model):
-
-    name_item_type = models.CharField(max_length=200)
-    image_item_type = models.ImageField(upload_to='storage/item_type/')
-    sort_priority_item_type = models.IntegerField()
-
-    def __str__(self):
-        return self.name_item_type
+from django.contrib.auth.models import User, Group
 
 
 class ItemGroup(models.Model):
 
-    name_item_group = models.CharField(max_length=200)
+    name_item_group = models.CharField(max_length=100, unique=True)
     image_item_group = models.ImageField(upload_to='storage/item_group/')
     sort_priority_item_group = models.IntegerField()
 
@@ -24,10 +14,9 @@ class ItemGroup(models.Model):
 
 class Item(models.Model):
 
-    name_item = models.CharField(max_length=200)
-    image_item = models.ImageField(upload_to='storage/item/')
-    type_item = models.ForeignKey(ItemType, related_name='type_item', on_delete=models.CASCADE)
-    group_item = models.ManyToManyField(ItemGroup, related_name='group')
+    name_item = models.CharField(max_length=100, unique=True)
+    group_item = models.ForeignKey(ItemGroup, related_name='group_item', on_delete=models.SET_NULL, blank=True, null=True)
+    image_item = models.ImageField(upload_to='storage/item')
 
     def __str__(self):
         return self.name_item
@@ -35,8 +24,10 @@ class Item(models.Model):
 
 class Storage(models.Model):
 
-    name_storage = models.CharField(max_length=200)
+    name_storage = models.CharField(max_length=100, unique=True)
     user_storage = models.ForeignKey(User, related_name='user_storage', on_delete=models.CASCADE)
+    is_public = models.BooleanField(default=False)
+    group_storage = models.ForeignKey(Group, related_name='group_storage', on_delete=models.SET_NULL, blank=True, null=True)
 
     def __str__(self):
         return self.name_storage
@@ -44,39 +35,51 @@ class Storage(models.Model):
 
 class ItemContainer(models.Model):
 
-    item_container = models.ForeignKey(Item, related_name='item_container', on_delete=models.CASCADE)
-    amount_container = models.IntegerField()
+    item_in_container = models.ForeignKey(Item, related_name='item_in_container', on_delete=models.CASCADE)
+    amount_in_container = models.PositiveIntegerField()
     storage_container = models.ForeignKey(Storage, related_name='storage_container', on_delete=models.CASCADE)
 
     def __str__(self):
-        return str(self.item_container) + ' on ' + str(self.storage_container)
+        return f'{self.amount_in_container}({self.item_in_container}) on {self.storage_container} storage'
 
 
-class Event(models.Model):
+class Order(models.Model):
+    STATUS_VARS = (
+        ('D', 'Draft'),
+        ('TD', 'To Do'),
+        ('IP', 'In Progress'),
+        ('DS', 'Done by Sender'),
+        ('DR', 'Done by Recipient'),
+        ('IR', 'In Road'),
+        ('С', 'Canceled'),
+        ('L', 'Lost'),
+    )
 
-    user_event = models.ForeignKey(User, related_name='user_event', on_delete=models.CASCADE)
-    name_event = models.CharField(max_length=200)
-    date_event = models.DateField()
+    date_order = models.DateField()
+    user_order = models.ForeignKey(User, related_name='user_order', on_delete=models.CASCADE)
+    storage_from = models.ForeignKey(Storage, related_name='storage_from', on_delete=models.CASCADE)
+    storage_to = models.ForeignKey(Storage, related_name='storage_to', on_delete=models.CASCADE)
+    status_order = models.CharField(max_length=2, choices=STATUS_VARS, default='D')
 
     def __str__(self):
-        return self.name_event
+        return f'{self.user_order} order on {self.date_order} ' \
+               f'from {self.storage_from} to {self.storage_to} order status ({self.status_order})'
 
 
 class ItemRequest(models.Model):
+
     STATUS_VARS = (
-        ('TD', 'ToDo'),
-        ('IP', 'InProgress'),
+        ('ND', 'Not Done'),
+        ('IP', 'In Progress'),
         ('D', 'Done'),
         ('L', 'Lost'),
-        ('C', 'Canceled'),
-    )# to int
+    )
 
-    item_request = models.ForeignKey(Item, related_name='item_request', on_delete=models.CASCADE)
-    amount_item_request = models.IntegerField()
-    event_item_request = models.ForeignKey(Event, related_name='event_item_request', on_delete=models.CASCADE)
-    storage_out = models.ForeignKey(Storage, related_name='storage_out', on_delete=models.CASCADE)
-    storage_in = models.ForeignKey(Storage, related_name='storage_in', on_delete=models.CASCADE)
-    status = models.CharField(max_length=2, choices=STATUS_VARS, default='TD')
+    item_in_request = models.ForeignKey(Item, related_name='item_in_request', on_delete=models.CASCADE)
+    amount_in_request = models.PositiveIntegerField()
+    order_request = models.ForeignKey(Order, related_name='order_request', on_delete=models.CASCADE)
+    status_item_request = models.CharField(max_length=2, choices=STATUS_VARS, default='ND')
 
     def __str__(self):
-        return f'{self.amount_item_request}({self.item_request}) from {self.storage_out} to {self.storage_in}'
+        return f'{self.amount_in_request}({self.item_in_request}) ' \
+               f'{self.order_request} request_status ({self.status_item_request})'
