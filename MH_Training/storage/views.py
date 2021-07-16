@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect, HttpResponseNotModified
 from django.db.models import Q
 
 from .models import Order, ItemRequest, Storage
+from .forms import CreateOrderForm
 
 
 def orders(response):
@@ -33,3 +34,24 @@ def orders(response):
                           'is_multi_storage': is_multi_storage,
                           'order_groups': order_groups,
                       })
+
+
+def new_order(response):
+    if not response.user.is_authenticated:
+        return HttpResponseRedirect('/login')
+    else:
+        user_storages = Storage.objects.filter(user_storage=response.user)
+        if response.method == 'POST':
+            form = CreateOrderForm(response.POST)
+            if form.is_valid():
+                date_order = form.cleaned_data['date_order']
+                storage_from = form.cleaned_data['storage_from']
+                storage_to = form.cleaned_data['storage_to']
+                user_order = response.user
+                order = Order(date_order=date_order, storage_from=storage_from,
+                              storage_to=storage_to, user_order=user_order)
+                order.save()
+        else:
+            form = CreateOrderForm()
+        return render(response, 'storage/new_order.html',
+                      {'form': form})
