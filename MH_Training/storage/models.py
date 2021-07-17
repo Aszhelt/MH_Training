@@ -79,7 +79,8 @@ class ItemRequest(models.Model):
 
     item_in_request = models.ForeignKey(Item, related_name='item_in_request', on_delete=models.CASCADE)
     amount_in_request = models.PositiveIntegerField()
-    order_request = models.ForeignKey(Order, related_name='order_request', on_delete=models.CASCADE)
+    order_request = models.ForeignKey(Order, related_name='order_request',
+                                      on_delete=models.CASCADE)
     status_item_request = models.CharField(max_length=2, choices=STATUS_VARS, default='ND')
 
     def __str__(self):

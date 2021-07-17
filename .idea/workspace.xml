@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2eae4e4-6c8f-4998-a713-beeb751b62db" name="Default Changelist" comment="storages, specific storage view">
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/item/aed_training.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/item/bvm_mini.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/item/cat_7_black.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/item/cat_7_orange.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/item/cat_7_orange.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/item/npa.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/item_group/Airway.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/item_group/CPR.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/item_group/breathing.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/item_group/critical_bleading.png" afterDir="false" />
+    <list default="true" id="e2eae4e4-6c8f-4998-a713-beeb751b62db" name="Default Changelist" comment="changes in orders view">
+      <change afterPath="$PROJECT_DIR$/MH_Training/storage/migrations/0003_alter_itemrequest_order_request.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/storage/migrations/0004_alter_itemrequest_order_request.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/storage/migrations/0005_alter_itemrequest_order_request.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/storage/migrations/0006_alter_itemrequest_order_request.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/storage/migrations/0007_alter_itemrequest_order_request.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/storage/migrations/0008_alter_itemrequest_order_request.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/view_order.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/storage/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/storage/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/storage/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/storage/templates/storage/new_order.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/new_order.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/storage/templates/storage/orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/orders.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/storage/templates/storage/storage_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/storage_view.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/storage/templates/storage/storages.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/storages.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/storage/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/storage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +34,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="MIXED" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="NamedScopeManager">
     <scope name="storage" pattern="file[MH_Training]:MH_Training/storage/*" />
   </component>
@@ -53,7 +58,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/MH_Training/storage/templates/storage" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MH_Training" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -304,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626523243159</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="changes in orders view">
+      <created>1626534431295</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1626534431295</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -346,6 +358,7 @@
     <MESSAGE value="Orders view, in 3 group" />
     <MESSAGE value="new order" />
     <MESSAGE value="storages, specific storage view" />
-    <option name="LAST_COMMIT_MESSAGE" value="storages, specific storage view" />
+    <MESSAGE value="changes in orders view" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes in orders view" />
   </component>
 </project>

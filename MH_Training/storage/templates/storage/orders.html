@@ -27,7 +27,7 @@
             {% elif order.date_order <= day_diff_yellow %}
                 <th style="color:yellow">{{ order.date_order }}</th>
             {% else %}
-                <th>{{ order.date_order }}</th>
+                <th style="color:green">{{ order.date_order }}</th>
             {% endif %}
             <th><a href="/storage/{{ order.storage_from.name_storage }}">{{ order.storage_from }}</a></th>
             <th><a href="/storage/{{ order.storage_to.name_storage }}">{{ order.storage_to }}</a></th>
