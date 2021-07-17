@@ -5,17 +5,16 @@
 {% block content %}
 
 {% for order_group in order_groups %}
-
+<!--order_group.0 - name for order group-->
+<!--order_group.1 - order group-->
     {% if order_group.1.count != 0 %}
     <h3>{{ order_group.0 }}</h3>
     <table class="table table-dark table-striped">
         <thead>
             <tr>
-                <th scope="col">Date to complete</th>
+                <th scope="col" >Date to complete</th>
                 <th scope="col">From storage</th>
-                {% if is_multi_storage %}
                 <th scope="col">To storage</th>
-                {% endif %}
                 <th scope="col">Status</th>
                 <th scope="col">To order</th>
             </tr>
@@ -23,13 +22,17 @@
         <tbody>
         {% for order in order_group.1 %}
         <tr>
-            <th>{{ order.date_order }}</th>
-            <th>{{ order.storage_from }}</th>
-            {% if is_multi_storage %}
-            <th>{{ order.storage_to }}</th>
+            {% if order.date_order <= day_diff_red %}
+                <th style="color:red">{{ order.date_order }}</th>
+            {% elif order.date_order <= day_diff_yellow %}
+                <th style="color:yellow">{{ order.date_order }}</th>
+            {% else %}
+                <th>{{ order.date_order }}</th>
             {% endif %}
+            <th><a href="/storage/{{ order.storage_from.name_storage }}">{{ order.storage_from }}</a></th>
+            <th><a href="/storage/{{ order.storage_to.name_storage }}">{{ order.storage_to }}</a></th>
             <th>{{ order.get_status_order_display }}</th>
-            <th><a href="/orders{{ order.id }}">Detail</a></th>
+            <th><a href="/orders/{{ order.id }}">Detail</a></th>
         </tr>
         {% endfor %}
         </tbody>

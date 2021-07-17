@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2eae4e4-6c8f-4998-a713-beeb751b62db" name="Default Changelist" comment="new order">
-      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/item/quickclot_blue.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/storage_view.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/storages.html" afterDir="false" />
+    <list default="true" id="e2eae4e4-6c8f-4998-a713-beeb751b62db" name="Default Changelist" comment="storages, specific storage view">
+      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/item/aed_training.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/item/bvm_mini.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/item/cat_7_black.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/item/cat_7_orange.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/item/cat_7_orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/item/npa.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/item_group/Airway.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/item_group/CPR.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/item_group/breathing.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/item_group/critical_bleading.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/core/templates/core/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/core/templates/core/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/storage/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/storage/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/storage/templates/storage/new_order.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/new_order.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/storage/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/storage/templates/storage/orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/orders.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/storage/templates/storage/storage_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/storage_view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/storage/templates/storage/storages.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/storages.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/storage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -282,7 +290,21 @@
       <option name="project" value="LOCAL" />
       <updated>1626471758367</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="storages, specific storage view">
+      <created>1626523186588</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1626523186588</updated>
+    </task>
+    <task id="LOCAL-00032" summary="storages, specific storage view">
+      <created>1626523243159</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1626523243159</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -323,6 +345,7 @@
     <MESSAGE value="changes in models" />
     <MESSAGE value="Orders view, in 3 group" />
     <MESSAGE value="new order" />
-    <option name="LAST_COMMIT_MESSAGE" value="new order" />
+    <MESSAGE value="storages, specific storage view" />
+    <option name="LAST_COMMIT_MESSAGE" value="storages, specific storage view" />
   </component>
 </project>

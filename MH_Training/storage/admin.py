@@ -5,7 +5,7 @@ from .models import ItemGroup, Item, \
 
 
 class ItemGroupAdmin(admin.ModelAdmin):
-    list_display = ('name_item_group',)
+    list_display = ('name_item_group', 'sort_priority_item_group',)
 
 
 class ItemAdmin(admin.ModelAdmin):

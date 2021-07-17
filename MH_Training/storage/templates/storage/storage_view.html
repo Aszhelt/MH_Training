@@ -4,6 +4,11 @@
 
 {% block content %}
 
+<h1>{{ storage.name_storage }} storage</h1>
+
+{% for item_group in item_groups %}
+
+<h5>{{ item_group }}</h5>
 
 <table class="table table-dark table-striped">
         <thead>
@@ -15,14 +20,18 @@
         </thead>
         <tbody>
         {% for container in containers %}
-        <tr>
-            <th><img src="{{ container.item_in_container.image_item.url }}"
-                     alt="{{ container.item_in_container.item_name }}" width="50" height="50"></th>
-            <th>{{ container.item_in_container }}</th>
-            <th>{{ container.amount_in_container }}</th>
-        </tr>
+            {% if container.item_in_container.group_item == item_group %}
+                <tr>
+                    <th><img src="{{ container.item_in_container.image_item.url }}"
+                             alt="{{ container.item_in_container.item_name }}" width="75" height="75"></th>
+                    <th>{{ container.item_in_container }}</th>
+                    <th>{{ container.amount_in_container }}</th>
+                </tr>
+            {% endif %}
         {% endfor %}
         </tbody>
     </table>
+
+{% endfor %}
 
 {% endblock %}

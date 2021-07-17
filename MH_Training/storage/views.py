@@ -1,9 +1,15 @@
+import datetime
+
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect, HttpResponseNotModified
 from django.db.models import Q
+from datetime import date, timedelta
 
-from .models import Order, ItemRequest, Storage, ItemContainer
+from .models import Order, ItemRequest, Storage, ItemContainer, ItemGroup, Item
 from .forms import CreateOrderForm
+
+item_groups = ItemGroup.objects.order_by('sort_priority_item_group')
+all_storages = Storage.objects.order_by('-is_public')
 
 
 def orders(response):
@@ -11,28 +17,31 @@ def orders(response):
         return HttpResponseRedirect('/login')
     else:
         user_storages = Storage.objects.filter(user_storage=response.user)
-        is_multi_storage = user_storages.count() > 1
         not_closed_orders = Order.objects.filter(Q(status_order='D') | Q(status_order='TD')
-                                                 | Q(status_order='IP') | Q(status_order='IR'))
+                                                 | Q(status_order='IP') | Q(status_order='IR')).order_by('date_order')
 
-        # get not closed orders created by user
-        user_orders = not_closed_orders.filter(user_order=response.user)
+        # get not closed orders to user`s storage
+        orders_to_user_storage = not_closed_orders.filter(storage_to__in=user_storages)
 
         # get not closed orders from user`s storage
         orders_from_user_storage = not_closed_orders.filter(storage_from__in=user_storages)
 
-        # get other orders but not closed
-        other_orders = not_closed_orders.exclude(storage_from__in=user_storages).\
-            exclude(user_order=response.user)
+        # get not closed other orders
+        other_orders = not_closed_orders.exclude(storage_from__in=user_storages).exclude(storage_to__in=user_storages)
 
-        order_groups = (('My orders', user_orders),
+        today = date.today()
+        day_diff_red = today + timedelta(days=1)
+        day_diff_yellow = today + timedelta(days=3)
+
+        order_groups = (('Orders to my storage', orders_to_user_storage),
                         ('Orders from my storage', orders_from_user_storage),
                         ('Other orders', other_orders))
 
         return render(response, 'storage/orders.html',
                       {
-                          'is_multi_storage': is_multi_storage,
                           'order_groups': order_groups,
+                          'day_diff_red': day_diff_red,
+                          'day_diff_yellow': day_diff_yellow,
                       })
 
 
@@ -54,7 +63,6 @@ def new_order(response):
                 return HttpResponseRedirect('/orders')
         else:
             form = CreateOrderForm()
-            form.fields['storage_to'].queryset = user_storages
         return render(response, 'storage/new_order.html',
                       {'form': form})
 
@@ -63,11 +71,16 @@ def storages(response):
     if not response.user.is_authenticated:
         return HttpResponseRedirect('/login')
     else:
-        storages = Storage.objects.all()
+        public_storages = all_storages.filter(is_public=True)
+        private_storages = all_storages.filter(is_public=False)
+        storage_groups = (
+            ('public storages', public_storages),
+            ('private storages', private_storages),
+        )
 
         return render(response, 'storage/storages.html',
                       {
-                          'storages': storages,
+                          'storage_groups': storage_groups,
                       })
 
 
@@ -76,11 +89,11 @@ def storage_view(response, name_storage):
         return HttpResponseRedirect('/login')
     else:
         storage = get_object_or_404(Storage, name_storage=name_storage)
-        print(storage)
         containers = ItemContainer.objects.filter(storage_container=storage)
 
         return render(response, 'storage/storage_view.html',
                       {
+                          'item_groups': item_groups,
                           'storage': storage,
                           'containers': containers,
                       })
