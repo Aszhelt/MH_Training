@@ -1,0 +1,28 @@
+{% extends 'core/base.html' %}
+
+{% block title %}{{ storage.name_storage }} storage{% endblock %}
+
+{% block content %}
+
+
+<table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Image</th>
+                <th scope="col">Item</th>
+                <th scope="col">Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for container in containers %}
+        <tr>
+            <th><img src="{{ container.item_in_container.image_item.url }}"
+                     alt="{{ container.item_in_container.item_name }}" width="50" height="50"></th>
+            <th>{{ container.item_in_container }}</th>
+            <th>{{ container.amount_in_container }}</th>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

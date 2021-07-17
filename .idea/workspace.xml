@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2eae4e4-6c8f-4998-a713-beeb751b62db" name="Default Changelist" comment="Orders view, in 3 group">
-      <change afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/new_order.html" afterDir="false" />
+    <list default="true" id="e2eae4e4-6c8f-4998-a713-beeb751b62db" name="Default Changelist" comment="new order">
+      <change afterPath="$PROJECT_DIR$/MH_Training/media/storage/item/quickclot_blue.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/storage_view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/storages.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/core/templates/core/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/core/templates/core/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/storage/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/storage/templates/storage/orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/orders.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/storage/templates/storage/new_order.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/new_order.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/storage/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/storage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drawio/status processing.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/drawio/status processing.drawio" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -43,7 +45,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MH_Training" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/MH_Training/storage/templates/storage" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -273,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626467435669</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="new order">
+      <created>1626471758367</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1626471758367</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -313,6 +322,7 @@
     <MESSAGE value="events, event view" />
     <MESSAGE value="changes in models" />
     <MESSAGE value="Orders view, in 3 group" />
-    <option name="LAST_COMMIT_MESSAGE" value="Orders view, in 3 group" />
+    <MESSAGE value="new order" />
+    <option name="LAST_COMMIT_MESSAGE" value="new order" />
   </component>
 </project>

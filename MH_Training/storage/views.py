@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect, HttpResponseNotModified
 from django.db.models import Q
 
-from .models import Order, ItemRequest, Storage
+from .models import Order, ItemRequest, Storage, ItemContainer
 from .forms import CreateOrderForm
 
 
@@ -51,7 +51,36 @@ def new_order(response):
                 order = Order(date_order=date_order, storage_from=storage_from,
                               storage_to=storage_to, user_order=user_order)
                 order.save()
+                return HttpResponseRedirect('/orders')
         else:
             form = CreateOrderForm()
+            form.fields['storage_to'].queryset = user_storages
         return render(response, 'storage/new_order.html',
                       {'form': form})
+
+
+def storages(response):
+    if not response.user.is_authenticated:
+        return HttpResponseRedirect('/login')
+    else:
+        storages = Storage.objects.all()
+
+        return render(response, 'storage/storages.html',
+                      {
+                          'storages': storages,
+                      })
+
+
+def storage_view(response, name_storage):
+    if not response.user.is_authenticated:
+        return HttpResponseRedirect('/login')
+    else:
+        storage = get_object_or_404(Storage, name_storage=name_storage)
+        print(storage)
+        containers = ItemContainer.objects.filter(storage_container=storage)
+
+        return render(response, 'storage/storage_view.html',
+                      {
+                          'storage': storage,
+                          'containers': containers,
+                      })

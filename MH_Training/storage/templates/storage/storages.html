@@ -1,0 +1,28 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Storages{% endblock %}
+
+{% block content %}
+
+<table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Item</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Group</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for storage in storages %}
+        <tr>
+            <th><a href="/storage/{{ storage.name_storage }}/">{{ storage.name_storage }}</a></th>
+            <th>{{ storage.user_storage }}</th>
+            <th>{{ storage.is_public }}</th>
+            <th>{{ storage.group_storage }}</th>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
