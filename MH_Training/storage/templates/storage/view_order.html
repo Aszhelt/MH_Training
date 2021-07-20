@@ -8,8 +8,34 @@
     <div class="input-group mb-3">
         {% csrf_token %}
         <h4>{{ order_form }}</h4>
+        <h4>{{ order.status_order }}</h4>
     </div>
     <button type="submit" , name="save" , value="save" , class="btn btn-success">Save</button>
+</form>
+
+<form method="post" action="C">
+    {% csrf_token %}
+    <button type="submit" , name="save" , value="save" , class="btn btn-success">Canceled</button>
+</form>
+
+<form method="post" action="D">
+    {% csrf_token %}
+    <button type="submit" , name="save" , value="save" , class="btn btn-success">Draft</button>
+</form>
+
+<form method="post" action="TD">
+    {% csrf_token %}
+    <button type="submit" , name="save" , value="save" , class="btn btn-success">To Do</button>
+</form>
+
+<form method="post" action="IP">
+    {% csrf_token %}
+    <button type="submit" , name="save" , value="save" , class="btn btn-success">In Progress</button>
+</form>
+
+<form method="post" action="DR">
+    {% csrf_token %}
+    <button type="submit" , name="save" , value="save" , class="btn btn-success">Done by Recipient</button>
 </form>
 
 <table class="table table-dark table-striped">
