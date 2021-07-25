@@ -13,7 +13,7 @@ class ItemAdmin(admin.ModelAdmin):
 
 
 class StorageAdmin(admin.ModelAdmin):
-    list_display = ('name_storage', 'user_storage', 'is_public', 'is_temporary', 'group_storage')
+    list_display = ('name_storage', 'user_storage', 'is_public', 'is_temporary')
 
 
 class OrderAdmin(admin.ModelAdmin):

@@ -1,11 +1,10 @@
-from django.contrib.auth.models import User, Group
-from django.core.exceptions import FieldError
+from django.contrib.auth.models import User
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect, HttpResponseNotModified
 from django.db.models import Q
 from datetime import date, timedelta
 
-from .models import Order, ItemRequest, Storage, ItemContainer, ItemGroup, Item
+from .models import Order, ItemRequest, Storage, ItemContainer, ItemGroup
 from .forms import CreateOrderForm, CreateRequestForm, EditItemRequest
 
 
@@ -13,7 +12,6 @@ from .forms import CreateOrderForm, CreateRequestForm, EditItemRequest
 
 
 item_groups = ItemGroup.objects.order_by('sort_priority_item_group')
-all_storages = Storage.objects.order_by('-is_public')
 today = date.today()
 
 
@@ -59,9 +57,10 @@ def new_order(response):
                 date_order = form.cleaned_data['date_order']
                 storage_from = form.cleaned_data['storage_from']
                 storage_to = form.cleaned_data['storage_to']
+                group_order = form.cleaned_data['group_order']
                 user_order = response.user
                 order = Order(date_order=date_order, storage_from=storage_from,
-                              storage_to=storage_to, user_order=user_order)
+                              storage_to=storage_to, user_order=user_order, group_order=group_order)
                 order.save()
                 return HttpResponseRedirect(f'/orders/{order.id}')
         else:
@@ -75,6 +74,7 @@ def view_order(response, id):
         return HttpResponseRedirect('/login')
     else:
         order = get_object_or_404(Order, id=id)
+        order_functions = get_order_functions(response, order)
 
         if response.method == 'POST':
             if response.POST.get('save'):
@@ -84,6 +84,7 @@ def view_order(response, id):
                     order.date_order = order_form.cleaned_data['date_order']
                     order.storage_from = order_form.cleaned_data['storage_from']
                     order.storage_to = order_form.cleaned_data['storage_to']
+                    order.group_order = order_form.cleaned_data['group_order']
                     order.save()
                     return HttpResponseNotModified()
             else:
@@ -92,7 +93,8 @@ def view_order(response, id):
             data = {
                 'date_order': order.date_order,
                 'storage_from': order.storage_from,
-                'storage_to': order.storage_to
+                'storage_to': order.storage_to,
+                'group_order': order.group_order,
             }
             order_form = CreateOrderForm(data=data)
 
@@ -109,6 +111,7 @@ def view_order(response, id):
             return render(response, 'storage/view_order.html',
                           {
                               'order': order,
+                              'order_functions': order_functions,
                               'item_groups': item_groups,
                               'order_form': order_form,
                               'request_form': request_form,
@@ -117,7 +120,8 @@ def view_order(response, id):
             data = {
                 'date_order': order.date_order,
                 'storage_from': order.storage_from,
-                'storage_to': order.storage_to
+                'storage_to': order.storage_to,
+                'group_order': order.group_order,
             }
             order_form = CreateOrderForm(data=data)
 
@@ -127,6 +131,7 @@ def view_order(response, id):
         return render(response, 'storage/view_order.html',
                       {
                           'order': order,
+                          'order_functions': order_functions,
                           'item_groups': item_groups,
                           'order_form': order_form,
                           'request_form': request_form,
@@ -383,65 +388,105 @@ def storage_from_to_storage_to(order):
 
 # get statuses for order that current user can set
 def get_order_functions(response, order):
+    from_status_to_status = {
+        'DR': ('TD', 'CC', 'CR', 'IP'),
+        'TD': ('DR', 'CC', 'CR', 'CS', 'DN', 'IP'),
+        'IP': ('IR', 'DN', 'CS', 'DR', 'TD'),
+        'IR': ('L', 'DN'),
+        'L': ('DN',),
+    }
+
     sender = order.storage_from.user_storage
     recipient = order.storage_to.user_storage
     creator = order.user_order
     viewer = response.user
 
-    sender_functions = Order.STATUS_VARS[0][1]
-    recipient_functions = Order.STATUS_VARS[1][1]
+    recipient_functions = Order.STATUS_VARS[0][1]
+    sender_functions = Order.STATUS_VARS[1][1]
     creator_functions = Order.STATUS_VARS[2][1]
 
-    viewer_functions = set()
+    viewer_functions = {}
 
     if viewer == creator:
-        viewer_functions.update(creator_functions)
+        for pair_functions in creator_functions:
+            viewer_functions.update({pair_functions[0]: pair_functions[1]})
     if viewer == recipient:
-        viewer_functions.update(recipient_functions)
+        for pair_functions in recipient_functions:
+            viewer_functions.update({pair_functions[0]: pair_functions[1]})
     if viewer == sender:
-        viewer_functions.update(sender_functions)
+        for pair_functions in sender_functions:
+            viewer_functions.update({pair_functions[0]: pair_functions[1]})
+    print(viewer_functions)
 
-    return viewer_functions
+    allowed_functions = {}
+    current_status = order.status_order
+    if current_status in from_status_to_status:
+        functions_set = from_status_to_status[current_status]
+    else:
+        return allowed_functions
+
+    for function in functions_set:
+        if function in viewer_functions.keys():
+            allowed_functions.update({function: viewer_functions[function]})
+
+    return allowed_functions
 
 
 # get available orders that current user can see
 def get_available_orders(response):
     user = response.user
     all_orders = Order.objects.order_by('date_order')
+    user_groups = user.groups.all()
+
+    not_done_orders = all_orders.filter(Q(status_order='DR') | Q(status_order='TD')
+                                        | Q(status_order='IP') | Q(status_order='IR'))
+
+    done_orders = all_orders.exclude(Q(status_order='DR') | Q(status_order='TD')
+                                        | Q(status_order='IP') | Q(status_order='IR'))
 
     if user.is_superuser:
-        return {'all orders': all_orders}
-    else:
-        storages = get_available_storages(response)
-        user_storages = storages['user storages']
-        group_storages = get_available_storages(response)['group storages']
-
-        orders_to_user_storages = Order.objects.filter(storage_to__in=user_storages)
-
-        orders_from_user_storages = Order.objects.filter(storage_from__in=user_storages)
-
-        orders_to_group_storages = Order.objects.filter(storage_to__in=group_storages)
-
-        orders_from_group_storages = Order.objects.filter(storage_from__in=group_storages)
-
-        all_orders = orders_to_user_storages.\
-            union(orders_from_user_storages).\
-            union(orders_to_group_storages).\
-            union(orders_from_group_storages)
-
         return {
-            'orders from user storages': orders_from_user_storages,
-            'orders to user storages': orders_to_user_storages,
-            'orders to group storages': orders_to_group_storages,
-            'orders from group storages': orders_from_group_storages,
-            'all orders': all_orders,
+            'not done orders': not_done_orders,
+            'done orders': done_orders,
         }
+    else:
+        available_storages = get_available_storages(response)
+        user_storages = available_storages['my storages']
+
+        orders_in_user_storages = not_done_orders.filter(storage_to__in=user_storages)
+        orders_in_user_storages = orders_in_user_storages.union(
+            not_done_orders.filter(storage_from__in=user_storages)
+        )
+
+        dict_of_orders_groups = {'orders in my storages': orders_in_user_storages}
+
+        for user_group in user_groups:
+            group_orders = get_group_orders(response, user_group)
+            dict_of_orders_groups.update({
+                f'{user_group.name} orders': group_orders[f'{user_group.name} orders']
+            })
+
+        return dict_of_orders_groups
+
+
+# get all orders related to group
+def get_group_orders(response, user_group):
+    all_orders = Order.objects.order_by('date_order')
+    not_done_orders = all_orders.filter(Q(status_order='DR') | Q(status_order='TD')
+                                        | Q(status_order='IP') | Q(status_order='IR'))
+
+    orders_in_group_storages = not_done_orders.filter(group_order=user_group)
+
+    group_orders = {f'{user_group.name} orders': orders_in_group_storages}
+    return group_orders
 
 
 # get available storages that current user can see
 def get_available_storages(response):
+
     user = response.user
     all_storages = Storage.objects.order_by('-is_public')
+    user_groups = user.groups.all()
 
     if user.is_superuser:
         not_temporary_storages = all_storages.exclude(is_temporary=True)
@@ -450,16 +495,26 @@ def get_available_storages(response):
             'not temporary storages': not_temporary_storages,
             'temporary storages': temporary_storages,
         }
+
     else:
-        user_storages = user.user_storage.all().exclude(is_temporary=True)
+        all_storages = all_storages.exclude(is_temporary=True)
+        dict_of_storages_groups = {'my storages': all_storages.filter(user_storage=user)}
 
-        user_groups = user.groups.all()
-        group_storages = Storage.objects.filter(group_storage__in=user_groups)
+        for user_group in user_groups:
+            all_storages_in_group = get_group_storages(response, user_group)
 
-        all_storages = user_storages.union(group_storages)
+            dict_of_storages_groups.update({
+                f'{user_group.name} storages': all_storages_in_group[f'{user_group.name} storages']
+            })
 
-        return {
-            'user storages': user_storages,
-            'group storages': group_storages,
-            'all storages': all_storages,
-        }
+        return dict_of_storages_groups
+
+
+# get all storages related to group
+def get_group_storages(response, user_group):
+
+    all_storages = Storage.objects.order_by('-is_public').exclude(is_temporary=True)
+
+    group_storages = {f'{user_group.name} storages': all_storages.filter(groups_storage=user_group)}
+
+    return group_storages

@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2eae4e4-6c8f-4998-a713-beeb751b62db" name="Default Changelist" comment="using support functions">
+      <change afterPath="$PROJECT_DIR$/MH_Training/storage/migrations/0004_auto_20210725_1845.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MH_Training/storage/migrations/0005_order_group_order.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/storage/templates/storage/orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/orders.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/storage/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/storage/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/storage/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/storage/templates/storage/storages.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/storages.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/storage/templates/storage/view_order.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/view_order.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/storage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/views.py" afterDir="false" />
     </list>
@@ -327,7 +332,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627209122922</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="using support functions">
+      <created>1627210570304</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1627210570304</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="UnknownFeatures">

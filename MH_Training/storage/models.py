@@ -26,8 +26,7 @@ class Storage(models.Model):
     user_storage = models.ForeignKey(User, related_name='user_storage', on_delete=models.CASCADE)
     is_public = models.BooleanField(default=False)
     is_temporary = models.BooleanField(default=False)
-    group_storage = models.ForeignKey(Group, related_name='group_storage',
-                                      on_delete=models.SET_NULL, blank=True, null=True)
+    groups_storage = models.ManyToManyField(Group, related_name='groups_storage', blank=True)
 
     def __str__(self):
         return self.name_storage
@@ -68,6 +67,7 @@ class Order(models.Model):
     user_order = models.ForeignKey(User, related_name='user_order', on_delete=models.CASCADE)
     storage_from = models.ForeignKey(Storage, related_name='storage_from', on_delete=models.CASCADE)
     storage_to = models.ForeignKey(Storage, related_name='storage_to', on_delete=models.CASCADE)
+    group_order = models.ForeignKey(Group, related_name='group_order', on_delete=models.CASCADE)
     status_order = models.CharField(max_length=2, choices=STATUS_VARS, default='DR')
 
     def __str__(self):

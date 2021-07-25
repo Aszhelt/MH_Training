@@ -13,30 +13,12 @@
     <button type="submit" , name="save" , value="save" , class="btn btn-success">Save</button>
 </form>
 
-<form method="post" action="DR">
-    {% csrf_token %}
-    <button type="submit" , name="save" , value="save" , class="btn btn-success">Draft</button>
-</form>
-
-<form method="post" action="TD">
-    {% csrf_token %}
-    <button type="submit" , name="save" , value="save" , class="btn btn-success">To Do</button>
-</form>
-
-<form method="post" action="IP">
-    {% csrf_token %}
-    <button type="submit" , name="save" , value="save" , class="btn btn-warning">In Progress</button>
-</form>
-
-<form method="post" action="DN">
-    {% csrf_token %}
-    <button type="submit" , name="save" , value="save" , class="btn btn-success">Done</button>
-</form>
-
-<form method="post" action="L">
-    {% csrf_token %}
-    <button type="submit" , name="save" , value="save" , class="btn btn-danger">Lost</button>
-</form>
+{% for order_function, name_order_function in order_functions.items %}
+    <form method="post" action="{{order_function}}">
+        {% csrf_token %}
+        <button type="submit", class="btn btn-success">{{name_order_function}}</button>
+    </form>
+{% endfor %}
 
 <table class="table table-dark table-striped">
     <thead>

@@ -1,5 +1,6 @@
 from django import forms
 from .models import Storage, Item
+from django.contrib.auth.models import Group
 
 
 class CreateOrderForm(forms.Form):
@@ -7,6 +8,7 @@ class CreateOrderForm(forms.Form):
     date_order = forms.DateField(widget=forms.SelectDateWidget())
     storage_from = forms.ModelChoiceField(queryset=Storage.objects.all())
     storage_to = forms.ModelChoiceField(queryset=Storage.objects.all())
+    group_order = forms.ModelChoiceField(queryset=Group.objects.all())
 
     def clean(self):
         cleaned_data = super(CreateOrderForm, self).clean()
