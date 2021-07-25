@@ -3,7 +3,6 @@ from django.contrib.auth.models import User, Group
 
 
 class ItemGroup(models.Model):
-
     name_item_group = models.CharField(max_length=100, unique=True)
     image_item_group = models.ImageField(upload_to='storage/item_group/')
     sort_priority_item_group = models.IntegerField()
@@ -13,7 +12,6 @@ class ItemGroup(models.Model):
 
 
 class Item(models.Model):
-
     name_item = models.CharField(max_length=100, unique=True)
     group_item = models.ForeignKey(ItemGroup, related_name='group_item',
                                    on_delete=models.SET_NULL, blank=True, null=True)
@@ -24,10 +22,10 @@ class Item(models.Model):
 
 
 class Storage(models.Model):
-
     name_storage = models.CharField(max_length=100, unique=True)
     user_storage = models.ForeignKey(User, related_name='user_storage', on_delete=models.CASCADE)
     is_public = models.BooleanField(default=False)
+    is_temporary = models.BooleanField(default=False)
     group_storage = models.ForeignKey(Group, related_name='group_storage',
                                       on_delete=models.SET_NULL, blank=True, null=True)
 
@@ -36,7 +34,6 @@ class Storage(models.Model):
 
 
 class ItemContainer(models.Model):
-
     item_in_container = models.ForeignKey(Item, related_name='item_in_container', on_delete=models.CASCADE)
     amount_in_container = models.PositiveIntegerField()
     storage_container = models.ForeignKey(Storage, related_name='storage_container', on_delete=models.CASCADE)
@@ -47,29 +44,38 @@ class ItemContainer(models.Model):
 
 class Order(models.Model):
     STATUS_VARS = (
-        ('D', 'Draft'),
-        ('TD', 'To Do'),
-        ('IP', 'In Progress'),
-        ('DS', 'Done by Sender'),
-        ('DR', 'Done by Recipient'),
-        ('IR', 'In Road'),
-        ('С', 'Canceled'),
-        ('L', 'Lost'),
+        ('Recipient', (
+                ('DR', 'Draft'),
+                ('TD', 'To Do'),
+                ('DN', 'Done'),
+                ('СR', 'Canceled by Recipient'),
+                ('L', 'Lost'),
+            )
+         ),
+        ('Sender', (
+                ('IP', 'In Progress'),
+                ('IR', 'In Road'),
+                ('CS', 'Canceled by Sender'),
+            )
+         ),
+        ('Creator', (
+                ('CC', 'Canceled by Creator'),
+            )
+         ),
     )
 
     date_order = models.DateField()
     user_order = models.ForeignKey(User, related_name='user_order', on_delete=models.CASCADE)
     storage_from = models.ForeignKey(Storage, related_name='storage_from', on_delete=models.CASCADE)
     storage_to = models.ForeignKey(Storage, related_name='storage_to', on_delete=models.CASCADE)
-    status_order = models.CharField(max_length=2, choices=STATUS_VARS, default='D')
+    status_order = models.CharField(max_length=2, choices=STATUS_VARS, default='DR')
 
     def __str__(self):
         return f'{self.user_order} order on {self.date_order} ' \
-               f'from {self.storage_from} to {self.storage_to} order status ({self.status_order})'
+               f'from {self.storage_from} to {self.storage_to}'
 
 
 class ItemRequest(models.Model):
-
     STATUS_VARS = (
         ('ND', 'Not Done'),
         ('IP', 'In Progress'),

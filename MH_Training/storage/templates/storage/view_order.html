@@ -13,12 +13,7 @@
     <button type="submit" , name="save" , value="save" , class="btn btn-success">Save</button>
 </form>
 
-<form method="post" action="C">
-    {% csrf_token %}
-    <button type="submit" , name="save" , value="save" , class="btn btn-success">Canceled</button>
-</form>
-
-<form method="post" action="D">
+<form method="post" action="DR">
     {% csrf_token %}
     <button type="submit" , name="save" , value="save" , class="btn btn-success">Draft</button>
 </form>
@@ -30,12 +25,17 @@
 
 <form method="post" action="IP">
     {% csrf_token %}
-    <button type="submit" , name="save" , value="save" , class="btn btn-success">In Progress</button>
+    <button type="submit" , name="save" , value="save" , class="btn btn-warning">In Progress</button>
 </form>
 
-<form method="post" action="DR">
+<form method="post" action="DN">
     {% csrf_token %}
     <button type="submit" , name="save" , value="save" , class="btn btn-success">Done by Recipient</button>
+</form>
+
+<form method="post" action="L">
+    {% csrf_token %}
+    <button type="submit" , name="save" , value="save" , class="btn btn-danger">Lost</button>
 </form>
 
 <table class="table table-dark table-striped">
