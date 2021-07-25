@@ -4,15 +4,14 @@
 
 {% block content %}
 
-{% for order_group in order_groups %}
-<!--order_group.0 - name for order group-->
-<!--order_group.1 - order group-->
-    {% if order_group.1.count != 0 %}
-    <h3>{{ order_group.0 }}</h3>
+{% for order_group, order_set in available_orders.items %}
+
+    {% if order_set.count != 0 %}
+    <h3>{{ order_group.capitalize }}</h3>
     <table class="table table-dark table-striped">
         <thead>
             <tr>
-                <th scope="col" >Date to complete</th>
+                <th scope="col">Date to complete</th>
                 <th scope="col">From storage</th>
                 <th scope="col">To storage</th>
                 <th scope="col">Status</th>
@@ -20,7 +19,7 @@
             </tr>
         </thead>
         <tbody>
-        {% for order in order_group.1 %}
+        {% for order in order_set %}
         <tr>
             {% if order.date_order <= day_diff_red %}
                 <th style="color:red">{{ order.date_order }}</th>

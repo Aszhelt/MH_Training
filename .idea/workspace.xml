@@ -1,24 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2eae4e4-6c8f-4998-a713-beeb751b62db" name="Default Changelist" comment="change_order_status function&#10;without canceled">
-      <change afterPath="$PROJECT_DIR$/MH_Training/storage/migrations/0002_alter_order_status_order.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MH_Training/storage/migrations/0003_alter_order_status_order.py" afterDir="false" />
+    <list default="true" id="e2eae4e4-6c8f-4998-a713-beeb751b62db" name="Default Changelist" comment="using support functions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/storage/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/storage/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/storage/migrations/0002_storage_is_public.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/storage/migrations/0003_alter_itemrequest_order_request.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/storage/migrations/0004_alter_itemrequest_order_request.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/storage/migrations/0005_alter_itemrequest_order_request.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/storage/migrations/0006_alter_itemrequest_order_request.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/storage/migrations/0007_alter_itemrequest_order_request.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/storage/migrations/0008_alter_itemrequest_order_request.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/storage/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MH_Training/storage/templates/storage/storages.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/storages.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MH_Training/storage/templates/storage/orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/orders.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/storage/templates/storage/view_order.html" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/templates/storage/view_order.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MH_Training/storage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/MH_Training/storage/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drawio/status processing.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/drawio/status processing.drawio" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -333,7 +320,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626749841371</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="using support functions">
+      <created>1627209122922</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1627209122922</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -353,7 +347,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="init django" />
     <MESSAGE value="base settings" />
     <MESSAGE value="main page" />
     <MESSAGE value="main page style" />
@@ -378,6 +371,7 @@
     <MESSAGE value="changes in orders view" />
     <MESSAGE value="create, edit, delete request&#10;edit order in order view" />
     <MESSAGE value="change_order_status function&#10;without canceled" />
-    <option name="LAST_COMMIT_MESSAGE" value="change_order_status function&#10;without canceled" />
+    <MESSAGE value="using support functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="using support functions" />
   </component>
 </project>

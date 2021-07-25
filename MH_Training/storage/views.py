@@ -24,7 +24,7 @@ def storages(response):
     if not response.user.is_authenticated:
         return HttpResponseRedirect('/login')
     else:
-        available_storages = get_avaliable_storages(response)
+        available_storages = get_available_storages(response)
 
         return render(response, 'storage/storages.html',
                       {
@@ -36,29 +36,14 @@ def orders(response):
     if not response.user.is_authenticated:
         return HttpResponseRedirect('/login')
     else:
-        user_storages = Storage.objects.filter(user_storage=response.user)
-        not_closed_orders = Order.objects.filter(Q(status_order='DR') | Q(status_order='TD')
-                                                 | Q(status_order='IP') | Q(status_order='IR')).order_by('date_order')
-
-        # get not closed orders to user`s storage
-        orders_to_user_storage = not_closed_orders.filter(storage_to__in=user_storages)
-
-        # get not closed orders from user`s storage
-        orders_from_user_storage = not_closed_orders.filter(storage_from__in=user_storages)
-
-        # get not closed other orders
-        other_orders = not_closed_orders.exclude(storage_from__in=user_storages).exclude(storage_to__in=user_storages)
+        available_orders = get_available_orders(response)
 
         day_diff_red = today + timedelta(days=1)
         day_diff_yellow = today + timedelta(days=3)
 
-        order_groups = (('Orders to my storage', orders_to_user_storage),
-                        ('Orders from my storage', orders_from_user_storage),
-                        ('Other orders', other_orders))
-
         return render(response, 'storage/orders.html',
                       {
-                          'order_groups': order_groups,
+                          'available_orders': available_orders,
                           'day_diff_red': day_diff_red,
                           'day_diff_yellow': day_diff_yellow,
                       })
@@ -420,16 +405,16 @@ def get_order_functions(response, order):
 
 
 # get available orders that current user can see
-def get_avaliable_orders(response):
+def get_available_orders(response):
     user = response.user
     all_orders = Order.objects.order_by('date_order')
 
     if user.is_superuser:
         return {'all orders': all_orders}
     else:
-        storages = get_avaliable_storages(response)
+        storages = get_available_storages(response)
         user_storages = storages['user storages']
-        group_storages = get_avaliable_storages(response)['group storages']
+        group_storages = get_available_storages(response)['group storages']
 
         orders_to_user_storages = Order.objects.filter(storage_to__in=user_storages)
 
@@ -439,16 +424,22 @@ def get_avaliable_orders(response):
 
         orders_from_group_storages = Order.objects.filter(storage_from__in=group_storages)
 
+        all_orders = orders_to_user_storages.\
+            union(orders_from_user_storages).\
+            union(orders_to_group_storages).\
+            union(orders_from_group_storages)
+
         return {
-            'orders to user storages': orders_to_user_storages,
             'orders from user storages': orders_from_user_storages,
+            'orders to user storages': orders_to_user_storages,
             'orders to group storages': orders_to_group_storages,
             'orders from group storages': orders_from_group_storages,
+            'all orders': all_orders,
         }
 
 
 # get available storages that current user can see
-def get_avaliable_storages(response):
+def get_available_storages(response):
     user = response.user
     all_storages = Storage.objects.order_by('-is_public')
 
@@ -465,7 +456,10 @@ def get_avaliable_storages(response):
         user_groups = user.groups.all()
         group_storages = Storage.objects.filter(group_storage__in=user_groups)
 
+        all_storages = user_storages.union(group_storages)
+
         return {
             'user storages': user_storages,
             'group storages': group_storages,
+            'all storages': all_storages,
         }
